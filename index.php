@@ -41,45 +41,10 @@ switch($action){
 <!DOCTYPE HTML>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>Lava Serpent</title>
-<style type="text/css">
-#login,#login_head,#register,#coming_soon,#register_login_getpass_links{
-	width: 400px;
-	margin: 0 auto;	
-}
-#submit{
-	clear: both;
-	width:100px;
-	margin:0 auto;	
-}
-#user_pass_form{
-	clear: both;
-	width:400px;
-	margin:0px auto 10px auto;
-	border: 1px #999 solid;
-	background: #cecece;
-}
-#login_head{
-	clear: both;
-	text-align:center;	
-	
-}
-#register_login_getpass_links{
-	clear: both;
-	margin:10px auto 10px auto;
-	text-align:center;
-}
-.clickme{
-	cursor:pointer;
-	text-decoration:underline;
-}
-#user,#pass{
-	text-align:center;
-}
-</style>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Lava Serpent</title>
+    <link rel="stylesheet" href="style.css" type="text/css" media="screen">
 </head>
-
 <body>
 <!--Login Page (start) -->
 <div id='login'>
