@@ -46,15 +46,19 @@ class Validate extends Database{
 		$lastname = is_string($lastname) && !is_null($lastname) ? $this->clean($lastname) : '';
 		$question = is_integer($question*1) && !is_null($question) ? $this->clean($question) : '';
 		$answer = is_string($answer) && !is_null($answer) ? $this->clean($answer) : '';
-		$insert = $this->query("INSERT IGNORE users SET
-			first_name='$firstname',
-			last_name='$lastname',
-			username ='$username',
-			password=AES_ENCRYPT('$password','".parent::AESKEY."'),
-			q_id='$question',
-			q_answer='$answer'
-		");
-		return $insert;		
+		if($firstname&&$lastname&&$username&&$password&&$question&&$answer){
+			$insert = $this->query("INSERT IGNORE users SET
+				first_name='$firstname',
+				last_name='$lastname',
+				username ='$username',
+				password=AES_ENCRYPT('$password','".parent::AESKEY."'),
+				q_id='$question',
+				q_answer='$answer'
+			");
+			return $insert;
+		}else{
+			return false;	
+		}
 	}
 	
 	public function confirmsecret($username,$question,$answer){
